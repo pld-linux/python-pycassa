@@ -11,11 +11,9 @@ Source0:	http://github.com/downloads/vomjom/%{module}/%{module}-%{version}.tar.g
 URL:		http://github.com/vomjom/pycassa
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-# if py_postclean is used
 BuildRequires:	rpmbuild(macros) >= 1.219
-#Requires:		python-libs
 Requires:	python-modules
-Requires:	thrift-python
+Requires:	python-thrift
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +33,6 @@ SuperColumns.
 %setup -q -n %{module}-%{version}
 
 %build
-export CFLAGS="%{rpmcflags}"
 %{__python} setup.py --cassandra build
 
 %install
@@ -53,9 +50,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-# %doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
-%{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/cassandra
+%dir %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}/*.py[co]
+%dir %{py_sitescriptdir}/cassandra
+%{py_sitescriptdir}/cassandra/*.py[co]
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-*.egg-info
 %endif
