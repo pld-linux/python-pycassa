@@ -2,12 +2,12 @@
 Summary:	Simple Python Cassandra library
 Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
-Version:	0.2.0
+Version:	0.3.0
 Release:	1
 License:	MIT/apache
 Group:		Development/Languages/Python
-Source0:	http://github.com/downloads/vomjom/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	8835acfba68a09342bd717be16456032
+Source0:	http://github.com/downloads/%{module}/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	fd6ce985200ea04987c2d53f0a958559
 URL:		http://github.com/vomjom/pycassa
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
@@ -21,13 +21,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Cassandra library with the following features: Auto-failover single or
 thread-local connections A simplified version of the thrift interface
 A method to map an existing class to a Cassandra ColumnFamily. Support
-for SuperColumns
+for SuperColumns.
+It is last version for Cassandra 0.6.x version.
 
 %description -l pl.UTF-8
 Biblioteka dostępu do Cassandry dla Pythona posiadająca: Jednowątkowe
 lub wielowątkowe interfejs Uproszczona wersję interfejsu thrift.
 Metodę do mapowania klass w ColumnFamily Cassandry. Obsługę
 SuperColumns.
+Ostatnia werjsa przeznaczona do współpracy z linią 0.6.x Cassandry.
 
 %prep
 %setup -q -n %{module}-%{version}
