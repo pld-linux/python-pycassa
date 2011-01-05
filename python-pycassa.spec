@@ -8,7 +8,7 @@ License:	MIT/apache
 Group:		Development/Languages/Python
 # https://github.com/downloads/pycassa/pycassa/pycassa-1.0.1.tar.gz
 Source0:	http://github.com/downloads/%{module}/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	c91c03cde375d8f5f3f1d6383799c594
+# Source0-md5:	823d65aaf4509ab06fdc8a9a2057dc7e
 URL:		https://github.com/pycassa/pycassa
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
