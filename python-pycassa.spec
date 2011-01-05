@@ -2,7 +2,7 @@
 Summary:	Simple Python Cassandra library
 Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
-Version:	1.0.1
+Version:	1.0.3
 Release:	1
 License:	MIT/apache
 Group:		Development/Languages/Python
