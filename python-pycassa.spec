@@ -20,18 +20,17 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Cassandra library with the following features: Auto-failover single or
-thread-local connections A simplified version of the thrift interface
-A method to map an existing class to a Cassandra ColumnFamily. Support
-for SuperColumns.
-It is last version for Cassandra 0.6.x version.
+Cassandra library with the following features: auto-failover single or
+thread-local connections, a simplified version of the thrift interface,
+a method to map an existing class to a Cassandra ColumnFamily. Supports
+SuperColumns.
 
 %description -l pl.UTF-8
-Biblioteka dostępu do Cassandry dla Pythona posiadająca: Jednowątkowe
-lub wielowątkowe interfejs Uproszczona wersję interfejsu thrift.
-Metodę do mapowania klass w ColumnFamily Cassandry. Obsługę
-SuperColumns.
-Ostatnia werjsa przeznaczona do współpracy z linią 0.6.x Cassandry.
+Biblioteka dostępu do Cassandry dla Pythona posiadająca: Jednowątkowy
+lub wielowątkowy interfejs, uproszczona wersję interfejsu thrift,
+metody do mapowania klas w ColumnFamily Cassandry. Wspiera obsługę
+superkolumn.
+
 
 %prep
 %setup -q -n %{module}-%{version}
