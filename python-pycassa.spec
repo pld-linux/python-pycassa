@@ -2,13 +2,13 @@
 Summary:	Simple Python Cassandra library
 Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
-Version:	1.0.8
+Version:	1.2.1
 Release:	1
 License:	MIT/apache
 Group:		Development/Languages/Python
 # https://github.com/downloads/pycassa/pycassa/pycassa-1.0.1.tar.gz
 Source0:	http://github.com/downloads/%{module}/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	185c5cbb53f76ba6061cdb1f5de75155
+# Source0-md5:	891559e30585e166a080304cad20b507
 URL:		https://github.com/pycassa/pycassa
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
@@ -61,6 +61,10 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/%{module}/*.py[co]
 %dir %{py_sitescriptdir}/%{module}/cassandra
 %{py_sitescriptdir}/%{module}/cassandra/*.py[co]
+%dir %{py_sitescriptdir}/%{module}/cassandra/c07
+%{py_sitescriptdir}/%{module}/cassandra/c07/*.py[co]
+%dir %{py_sitescriptdir}/%{module}/cassandra/c08
+%{py_sitescriptdir}/%{module}/cassandra/c08/*.py[co]
 %dir %{py_sitescriptdir}/%{module}/logging
 %{py_sitescriptdir}/%{module}/logging/*.py[co]
 
