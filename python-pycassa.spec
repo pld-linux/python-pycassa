@@ -3,7 +3,7 @@ Summary:	Simple Python Cassandra library
 Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	MIT/apache
 Group:		Development/Languages/Python
 # https://github.com/downloads/pycassa/pycassa/pycassa-1.0.1.tar.gz
@@ -14,6 +14,7 @@ BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	python-setuptools >= 0.6-2.c11 
+BuildRequires:	python-thrift
 Requires:	python-modules
 Requires:	python-thrift
 BuildArch:	noarch
