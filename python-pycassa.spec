@@ -12,7 +12,7 @@ Source0:	http://github.com/downloads/%{module}/%{module}/%{module}-%{version}.ta
 URL:		https://github.com/pycassa/pycassa
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-setuptools >= 0.6-2.c11 
 Requires:	python-modules
 Requires:	python-thrift
