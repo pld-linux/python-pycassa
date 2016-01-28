@@ -2,18 +2,20 @@
 Summary:	Simple Python Cassandra library
 Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
-Version:	1.7.2
+Version:	1.11.1
 Release:	2
 License:	MIT/apache
 Group:		Development/Languages/Python
 # https://github.com/downloads/pycassa/pycassa/pycassa-1.0.1.tar.gz
-Source0:	http://github.com/downloads/%{module}/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	aa69935198b39fb72a2969401180ddc8
+# https://github.com/%{module}/%{module}/archive/v%{version}.tar.gz
+Source0:	https://github.com/%{module}/%{module}/archive/v%{version}.tar.gz
+# Source0-md5:	b87e4effd85384fde09f016b0b084039
 URL:		https://github.com/pycassa/pycassa
 BuildRequires:	python-devel
+BuildRequires:	python-setuptools >= 0.6-2.c11
+BuildRequires:
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
-BuildRequires:	python-setuptools >= 0.6-2.c11 
 Requires:	python-modules
 Requires:	python-thrift
 BuildArch:	noarch
@@ -21,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Cassandra library with the following features: auto-failover single or
-thread-local connections, a simplified version of the thrift interface,
-a method to map an existing class to a Cassandra ColumnFamily. Supports
-SuperColumns.
+thread-local connections, a simplified version of the thrift
+interface, a method to map an existing class to a Cassandra
+ColumnFamily. Supports SuperColumns.
 
 %description -l pl.UTF-8
 Biblioteka dostępu do Cassandry dla Pythona posiadająca: Jednowątkowy
@@ -40,7 +42,7 @@ superkolumn.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%py_install 
+%py_install
 
 %py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
 %py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
@@ -61,6 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/%{module}/cassandra/*.py[co]
 %dir %{py_sitescriptdir}/%{module}/logging
 %{py_sitescriptdir}/%{module}/logging/*.py[co]
+%dir %{py_sitescriptdir}/%{module}/contrib
+%{py_sitescriptdir}/%{module}/contrib/*.py[co]
+
 
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-*.egg-info
