@@ -12,9 +12,9 @@ Source0:	https://github.com/%{module}/%{module}/archive/v%{version}.tar.gz
 # Source0-md5:	b87e4effd85384fde09f016b0b084039
 URL:		https://github.com/pycassa/pycassa
 BuildRequires:	python-devel
-BuildRequires:	python-setuptools >= 0.6-2.c11
+BuildRequires:	python-setuptools >= 1:0.6-2.c11
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.710
+BuildRequires:	rpmbuild(macros) >= 1.714
 Requires:	python-modules
 Requires:	python-thrift
 BuildArch:	noarch
