@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	Prosta biblioteka Pythona do Cassandry
 Name:		python-%{module}
 Version:	1.11.1
 Release:	4
-License:	MIT/apache
+License:	MIT/Apache
 Group:		Development/Languages/Python
 # https://github.com/downloads/pycassa/pycassa/pycassa-1.0.1.tar.gz
 # https://github.com/%{module}/%{module}/archive/v%{version}.tar.gz
@@ -27,11 +27,10 @@ interface, a method to map an existing class to a Cassandra
 ColumnFamily. Supports SuperColumns.
 
 %description -l pl.UTF-8
-Biblioteka dostępu do Cassandry dla Pythona posiadająca: Jednowątkowy
+Biblioteka dostępu do Cassandry dla Pythona posiadająca: jednowątkowy
 lub wielowątkowy interfejs, uproszczona wersję interfejsu thrift,
-metody do mapowania klas w ColumnFamily Cassandry. Wspiera obsługę
-superkolumn.
-
+metody do mapowania klas w ColumnFamily Cassandry. Obsługuje
+superkolumny.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -41,10 +40,9 @@ superkolumn.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %py_install
 
-%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
-%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
 %py_postclean
 
 %clean
@@ -64,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/%{module}/logging/*.py[co]
 %dir %{py_sitescriptdir}/%{module}/contrib
 %{py_sitescriptdir}/%{module}/contrib/*.py[co]
-
 
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-*.egg-info
